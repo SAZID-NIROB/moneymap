@@ -1,0 +1,32 @@
+const AuthLayout = ({ title, subtitle, children }) => (
+  <div className="relative min-h-screen overflow-hidden px-4 py-8 sm:px-6">
+    <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(45,163,139,0.2),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.16),transparent_32%),linear-gradient(180deg,rgba(248,250,252,1),rgba(241,245,249,1))] dark:bg-[radial-gradient(circle_at_top_left,rgba(45,163,139,0.18),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.12),transparent_30%),linear-gradient(180deg,rgba(2,6,23,1),rgba(15,23,42,1))]" />
+    <div className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-6xl items-center justify-center">
+      <div className="grid w-full gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="hidden flex-col justify-center lg:flex">
+          <div className="max-w-xl animate-appear">
+            <span className="inline-flex rounded-full border border-brand-300/50 bg-brand-50/70 px-4 py-1 text-sm font-semibold text-brand-700 dark:border-brand-400/30 dark:bg-brand-500/10 dark:text-brand-200">
+              MoneyMap
+            </span>
+            <h1 className="mt-6 text-5xl font-extrabold leading-tight tracking-tight text-slate-950 dark:text-white">
+MoneyMap — See your money. Shape your future.            </h1>
+            <p className="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
+              Track every rupee with clarity and ease.
+            </p>
+          </div>
+        </div>
+        <div className="glass-card animate-appear p-6 sm:p-8 lg:p-10">
+          <div className="mb-8">
+            <h2 className="text-3xl font-bold tracking-tight text-slate-950 dark:text-white">
+              {title}
+            </h2>
+            <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">{subtitle}</p>
+          </div>
+          {children}
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+export default AuthLayout;
